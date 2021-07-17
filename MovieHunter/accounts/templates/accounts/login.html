@@ -1,0 +1,19 @@
+{% extends "movie_app/index.html" %}
+{% block content %}
+<div class="container text-center">
+  <h2>Signin</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+    
+    {% for message in messages %}
+    <h3>{{ message }}</h3>
+    {% endfor %}
+  </form>
+</div>
+{% endblock content %}
+
+{% block news %}{% endblock news %}
+
+{% block comming %}{% endblock comming %}
